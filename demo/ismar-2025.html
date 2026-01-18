@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaHaptics Demo | Soyeong Yang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-color: #111; --secondary-color: #555; --link-color: #2753C5; --bg-color: #ffffff; --border-color: #eeeeee; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--primary-color); background-color: var(--bg-color); }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 25px; }
+        .back-link { text-decoration: none; color: var(--link-color); font-weight: 600; display: inline-block; margin-bottom: 30px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; border-left: 5px solid var(--link-color); padding-left: 15px; }
+        .venue { color: var(--secondary-color); font-style: italic; margin-bottom: 30px; }
+        .hero-img { width: 100%; border-radius: 12px; margin-bottom: 40px; border: 1px solid var(--border-color); }
+        h2 { font-size: 1.4rem; margin: 40px 0 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        p { margin-bottom: 20px; color: var(--secondary-color); }
+        .btn-style { text-decoration: none !important; color: #000000 !important; font-size: 0.85rem; font-weight: 600; background: #f1f1f1; padding: 8px 20px; border-radius: 25px; transition: 0.2s; border: 1px solid #e0e0e0; display: inline-flex; margin-right: 10px; }
+        .btn-style:hover { background: #e5e5e5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        <h1>[ISMAR2025] AquaHaptics</h1>
+        <p class="venue">Demo at International Symposium on Mixed and Augmented Reality (ISMAR) 2025</p>
+        
+        <img src="../images/AquaHaptics_ISMAR_2025.jpg" alt="AquaHaptics Demo" class="hero-img">
+
+        <div class="links">
+            <a href="#" class="btn-style">Abstract PDF</a>
+            <a href="#" class="btn-style">Demo Video</a>
+            <a href="#" class="btn-style">Poster</a>
+        </div>
+
+        <h2>Project Description</h2>
+        <p>This demo presents AquaHaptics, a hand-based multimodal haptic interaction system designed for immersive virtual underwater experiences. The system integrates pressure, vibration, and thermal feedback to simulate the complex physical sensations of being underwater.</p>
+        
+        <h2>Key Technologies</h2>
+        <p>Using Unity and custom-built physical computing modules (Arduino), we developed a rendering algorithm that ensures cognitively meaningful haptic feedback during VR underwater navigation.</p>
+    </div>
+</body>
+</html>
