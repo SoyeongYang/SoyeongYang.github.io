@@ -152,7 +152,6 @@
             iframe.src = pdfPath;
             modal.style.display = "flex";
             
-            // 배경 스크롤 방지
             document.body.style.overflow = "hidden";
         }
 
@@ -161,9 +160,8 @@
             const iframe = document.getElementById("pdfFrame");
             
             modal.style.display = "none";
-            iframe.src = ""; // 닫을 때 리소스 해제
+            iframe.src = "";
             
-            // 배경 스크롤 복구
             document.body.style.overflow = "auto";
         }
     </script>

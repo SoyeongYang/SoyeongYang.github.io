@@ -51,7 +51,7 @@
             font-weight: 600;
         }
 
-        /* 공통 버튼 디자인 */
+        /* Button Design */
         .btn-style { 
             text-decoration: none !important;
             color: #000000 !important;
@@ -88,7 +88,7 @@
         .info-sub { color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 4px; }
         .info-desc { font-size: 0.9rem; color: #666; }
 
-        /* 불렛 리스트 스타일 (Awards & Honors용) */
+        /* Awards & Honors */
         .bullet-list { list-style: none; padding-left: 0; }
         .bullet-list li { 
             position: relative; 
@@ -104,7 +104,7 @@
             color: var(--primary-color); 
         }
 
-        /* Academic Service (Two Column Grid) - 왼쪽 정렬 수정 */
+        /* Academic Service (Two Column Grid) */
         .service-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
         .service-title { font-weight: 700; text-align: center; margin-bottom: 15px; font-size: 1rem; }
         .service-list { list-style: none; text-align: left; padding-left: 0; width: fit-content; margin: 0 auto; }
@@ -123,18 +123,7 @@
 
         footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.8rem; }
 
-        @media (max-width: 768px) {
-            .container { padding: 0 15px; }
-            .nav-content { flex-direction: column; gap: 10px; text-align: center; }
-            nav ul { gap: 15px; width: 100%; justify-content: center; overflow-x: auto; padding-bottom: 5px; }
-            .about-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 20px; }
-            .about-img { width: 160px; }
-            .list-item { grid-template-columns: 1fr; gap: 10px; }
-            .service-container { grid-template-columns: 1fr; gap: 30px; }
-            .service-list { margin: 0; }
-        }
-
-        /* 모달 배경 */
+        /* Modal Background */
         .modal {
             display: none;
             position: fixed;
@@ -143,28 +132,19 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.85); /* 검은색 반투명 배경 */
+            background-color: rgba(0,0,0,0.85);
             cursor: pointer;
             align-items: center;
             justify-content: center;
         }
-
-        /* 모달 이미지 스타일 */
+        /* Modal Image */
         .modal-content {
             max-width: 90%;
             max-height: 90%;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            /* 이미지 확대 애니메이션 */
             animation: zoomIn 0.3s ease;
         }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        /* 닫기 버튼 */
         .close-modal {
             position: absolute;
             top: 20px;
@@ -172,6 +152,71 @@
             color: #fff;
             font-size: 40px;
             font-weight: bold;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 0.85rem; }
+
+            h1 { font-size: 1.8rem !important; } /* main title */
+            h2 { font-size: 1.3rem !important; margin-bottom: 1.2rem !important; } /* section title (e.g. Publications) */
+            h3 { font-size: 1.0rem !important; margin: 1.5rem 0 0.8rem !important; } /* subsection title (e.g. Papers) */
+            
+            .about-text h1 { font-size: 1.4rem !important; }
+            .about-text p { font-size: 0.85rem !important; }
+
+            .social-links { 
+                justify-content: center !important; 
+                margin-top: 1.2rem !important;
+            }
+            
+            .item-title { font-size: 0.85rem !important; } /* paper title */
+            .item-authors, .item-venue { font-size: 0.8rem !important; }
+            
+            .btn-style { font-size: 0.75rem !important; padding: 4px 12px !important; } /* button size */
+
+            .bullet-list li { font-size: 0.8rem !important; }
+
+            .service-title { font-size: 0.85rem !important; }
+            .service-list li { font-size: 0.8rem !important; }
+
+            .container { padding: 0 15px; }
+            .nav-content { flex-direction: column; gap: 10px; text-align: center; }
+            nav ul { gap: 15px; width: 100%; justify-content: center; overflow-x: auto; padding-bottom: 5px; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 20px; }
+            .about-img { width: 160px; }
+            .list-item { grid-template-columns: 1fr; gap: 10px; }
+            .service-container { grid-template-columns: 1fr; gap: 30px; }
+            .service-list { margin: 0; }
+
+            /* --- Experience mobile layout --- */
+            #experience .list-item {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 10px !important;
+            }
+            #experience .list-item img {
+                margin-top: 0 !important;
+                width: 70px !important;   /* minimize logo image */
+                height: auto !important;
+                margin-bottom: 5px;
+            }
+            #experience .info-block {
+                width: 100%;
+            }
+            #experience .info-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+            #experience .info-header span:first-child { order: 1; display: block; font-size: 0.95rem; } /* institution */
+            #experience .info-header span:last-child { order: 2; display: block; font-weight: 400; font-size: 0.85rem; } /* period */
+            #experience .info-sub { order: 3; display: block; margin-top: 2px; font-size: 0.8rem; } /* position */
+            #experience .info-desc { order: 4; display: block; margin-top: 2px; font-size: 0.8rem; } /* content */
         }
     </style>
 </head>
@@ -330,14 +375,12 @@
             const modalImg = document.getElementById("modalImage");
             modal.style.display = "flex";
             modalImg.src = imgSrc;
-            // 배경 스크롤 방지
             document.body.style.overflow = "hidden";
         }
 
         function closeModal() {
             const modal = document.getElementById("imageModal");
             modal.style.display = "none";
-            // 배경 스크롤 복구
             document.body.style.overflow = "auto";
         }
     </script>
