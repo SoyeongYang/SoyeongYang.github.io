@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soyeong Yang | KAIST HCI Tech Lab</title>
+    <link rel="icon" href="./images/icon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -38,11 +39,11 @@
         h3 { font-size: 1.2rem; margin: 2rem 0 1rem; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1px; }
 
         /* About Section */
-        .about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: flex-start; }
+        .about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; }
         .about-img { width: 100%; border-radius: 12px; filter: grayscale(10%); border: 1px solid var(--border-color); }
-        .about-text h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .about-text .position { font-size: 1.1rem; color: var(--link-color); font-weight: 600; margin-bottom: 1.5rem; }
-        .about-text p { margin-bottom: 1rem; color: var(--secondary-color); }
+        .about-text h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+        .about-text .position { font-size: 1.0rem; color: var(--link-color); font-weight: 600; margin-bottom: 1.5rem; }
+        .about-text p { margin-bottom: 0.5rem; color: var(--secondary-color); }
         
         .about-text a, .info-desc a { 
             color: var(--link-color); 
@@ -50,15 +51,15 @@
             font-weight: 600;
         }
 
-        /* 공통 버튼 디자인 (첨부 이미지 가이드 반영) */
+        /* 공통 버튼 디자인 */
         .btn-style { 
-            text-decoration: none !important; /* 밑줄 절대 제거 */
-            color: #000000 !important; /* 블랙 폰트색 */
+            text-decoration: none !important;
+            color: #000000 !important;
             font-size: 0.85rem; 
             font-weight: 600;
-            background: #f1f1f1; /* 연한 회색 배경 */
+            background: #f1f1f1;
             padding: 6px 16px; 
-            border-radius: 25px; /* 모서리가 아주 둥근 모양 */
+            border-radius: 25px;
             transition: all 0.2s ease;
             border: 1px solid #e0e0e0;
             display: inline-flex;
@@ -73,49 +74,104 @@
         .social-links { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 10px; }
 
         /* Publications & List Style */
-        .list-item { display: grid; grid-template-columns: 220px 1fr; gap: 30px; margin-bottom: 2rem; }
+        .list-item { display: grid; grid-template-columns: 220px 1fr; gap: 30px; margin-bottom: 3rem; }
         .item-img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color); }
         .item-title { font-size: 1.05rem; font-weight: 600; color: var(--primary-color); margin-bottom: 4px; }
         .item-authors { font-size: 0.95rem; color: var(--primary-color); }
         .item-authors span.me { text-decoration: underline; }
         .item-venue { font-size: 0.9rem; color: var(--secondary-color); font-style: italic; margin: 4px 0; }
-        
         .item-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
 
-        /* Projects Grid */
-        .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .project-card { display: flex; flex-direction: column; }
-        .project-img-container { width: 100%; height: 180px; overflow: hidden; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 12px; }
-        .project-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-        .project-card:hover img { transform: scale(1.05); }
-        .project-card a { text-align: center; text-decoration: underline; color: var(--primary-color); font-weight: 700; font-size: 1rem; transition: color 0.2s; }
-        .project-card a:hover { color: var(--link-color); }
-
-        /* Experience & Awards */
+        /* Experience Blocks */
         .info-block { margin-bottom: 1.5rem; }
         .info-header { display: flex; justify-content: space-between; font-weight: 600; color: var(--primary-color); }
         .info-sub { color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 4px; }
         .info-desc { font-size: 0.9rem; color: #666; }
 
-        /* Skills */
-        .skill-grid { display: grid; grid-template-columns: 180px 1fr; gap: 10px; margin-bottom: 10px; border-bottom: 1px solid #f9f9f9; padding-bottom: 8px; }
-        .skill-cat { font-weight: 600; font-size: 0.9rem; color: var(--secondary-color); }
-        .skill-val { font-size: 0.9rem; }
+        /* 불렛 리스트 스타일 (Awards & Honors용) */
+        .bullet-list { list-style: none; padding-left: 0; }
+        .bullet-list li { 
+            position: relative; 
+            padding-left: 1.2rem; 
+            margin-bottom: 0.8rem; 
+            font-size: 0.95rem;
+            color: var(--primary-color);
+        }
+        .bullet-list li::before { 
+            content: "▪"; 
+            position: absolute; 
+            left: 0; 
+            color: var(--primary-color); 
+        }
+
+        /* Academic Service (Two Column Grid) - 왼쪽 정렬 수정 */
+        .service-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+        .service-title { font-weight: 700; text-align: center; margin-bottom: 15px; font-size: 1rem; }
+        .service-list { list-style: none; text-align: left; padding-left: 0; width: fit-content; margin: 0 auto; }
+        .service-list li { 
+            position: relative; 
+            padding-left: 1.2rem; 
+            margin-bottom: 5px; 
+            font-size: 0.95rem; 
+            color: #333; 
+        }
+        .service-list li::before { 
+            content: "▪"; 
+            position: absolute; 
+            left: 0; 
+        }
 
         footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.8rem; }
 
-        /* --- 모바일 최적화 --- */
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
             .nav-content { flex-direction: column; gap: 10px; text-align: center; }
             nav ul { gap: 15px; width: 100%; justify-content: center; overflow-x: auto; padding-bottom: 5px; }
             .about-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 20px; }
             .about-img { width: 160px; }
-            .social-links, .item-links { justify-content: center; }
             .list-item { grid-template-columns: 1fr; gap: 10px; }
-            .project-grid { grid-template-columns: 1fr; }
-            #awards > div { grid-template-columns: 1fr !important; gap: 20px !important; }
-            .info-header { flex-direction: column; gap: 2px; }
+            .service-container { grid-template-columns: 1fr; gap: 30px; }
+            .service-list { margin: 0; }
+        }
+
+        /* 모달 배경 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.85); /* 검은색 반투명 배경 */
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 모달 이미지 스타일 */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            /* 이미지 확대 애니메이션 */
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* 닫기 버튼 */
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -123,12 +179,14 @@
 
     <nav>
         <div class="container nav-content">
-            <a href="#" class="site-title">Soyeong Yang</a>
+            <a href="index.html">
+                <img src="./images/logo.png" alt="Soyeong Yang" style="height: 32px; width: auto; display: block;">
+            </a>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#publications">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="./projects.html">Projects</a></li> 
             </ul>
         </div>
     </nav>
@@ -136,13 +194,13 @@
     <div class="container">
         <section id="about" style="border-bottom: 2px solid #111;">
             <div class="about-grid">
-                <img src="images/Soyeong_profile3.jpeg" alt="Soyeong Yang" class="about-img">
+                <img src="./images/Soyeong_profile3.jpeg" alt="Soyeong Yang" class="about-img">
                 <div class="about-text">
                     <h1>Soyeong Yang</h1>
-                    <p class="position">Ph.D. Student @ HCI Tech Lab, KAIST</p>
+                    <p style="font-size: 1.0rem; color: #555; font-weight: 300; margin-bottom: 1.0rem; letter-spacing: -0.02em;">Ph.D. Student @ HCI Tech Lab, KAIST</p>
                     <p>Soyeong Yang is a Ph.D. student in <a href="https://hcitech.org/index.html" target="_blank">HCI Tech Lab</a> at <a href="https://www.kaist.ac.kr/en/" target="_blank">Korea Advanced Institute of Science and Technology (KAIST)</a>, advised by Prof. Sang Ho Yoon.</p>
                     <p>Her research interests are <strong>Haptic Rendering, Human Perception, and Virtual Reality</strong>. She focuses on rendering algorithms to ensure that haptic feedback in VR provides users with cognitively meaningful and enhanced experiences.</p>
-                    <p>She earned her M.S. from <a href="https://meta.kaist.ac.kr/" target="_blank">KAIST (Metaverse)</a>, <a href="https://ct.kaist.ac.kr/" target="_blank">(Culture&Technology)</a> and B.E. from <a href="https://artech.cau.ac.kr/" target="_blank">Chung-Ang University (Art&Technology)</a>.</p>
+                    <p>She earned her M.S. from <strong>KAIST</strong> (<a href="https://meta.kaist.ac.kr/" target="_blank">Metaverse</a>, <a href="https://ct.kaist.ac.kr/" target="_blank">Culture&Technology</a>), and B.E. from <strong>Chung-Ang University</strong> (<a href="https://artech.cau.ac.kr/" target="_blank">Art&Technology</a>).</p>
                     
                     <div class="social-links">
                         <a href="mailto:sy.yang@kaist.ac.kr" class="btn-style">✉️ E-mail</a>
@@ -156,177 +214,132 @@
         </section>
 
         <section id="publications">
-            <h2>Publications</h2>
-            
+            <h2 style="justify-content: center; border: none;">Publications</h2>
             <h3>Papers</h3>
             <div class="list-item">
                 <img src="images/AquaHaptics_TVCG_2026.png" alt="AquaHaptics" class="item-img">
                 <div class="pub-info">
                     <div class="item-title">AquaHaptics: Hand-based Multimodal Haptic Interactions for Immersive Virtual Underwater Experience</div>
                     <div class="item-authors"><span class="me">Soyeong Yang</span>, Sang Ho Yoon</div>
-                    <div class="item-venue">Accepted - Will be Published IEEE TVCG</div>
+                    <div class="item-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG)</div>
                     <div class="item-links">
-                        <a href="#" class="btn-style">DOI</a>
-                        <a href="#" class="btn-style">Project Website</a>
-                        <a href="#" class="btn-style">Video</a>
+                        <a href="https://doi.org/10.1109/TVCG.2026.3652832" class="btn-style">DOI</a>
+                        <a href="https://aquahaptics.hcitech.org/" class="btn-style">Project Website</a>
+                        <a href="https://youtu.be/Wb6hJrp4kCM?si=mp78M1cxpOc8Y7ES" class="btn-style">Video</a>
                     </div>
                 </div>
             </div>
 
-            <h3>Demo</h3>
+            <h3>Demo, Poster and Workshop</h3>
             <div class="list-item">
                 <img src="images/AquaHaptics_ISMAR_2025.jpg" alt="Demo" class="item-img">
                 <div class="pub-info">
-                    <div class="item-title"><a href="./demo/ismar-2025.html" style="text-decoration: underline; color: inherit;">AquaHaptics: Hand-Adaptive Haptic Feedback for VR Underwater</a></div>
+                    <div class="item-title">AquaHaptics: Hand-Adaptive Haptic Feedback for VR Underwater</div>
                     <div class="item-authors"><span class="me">Soyeong Yang</span>, Sang Ho Yoon</div>
+                    <div class="item-venue">IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2025)</div>
                     <div class="item-links">
-                        <a href="#" class="btn-style">Abstract</a>
-                        <a href="#" class="btn-style">Poster</a>
+                        <a href="javascript:void(0);" class="btn-style" onclick="openModal('./images/AquaHaptics_ISMAR_2025.jpg')">Poster</a>
+                        <a href="./demo/ismar-2025.html" class="btn-style">Project Website</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="experience">
-            <h2>Experience</h2>
-            
+            <h2 style="justify-content: center; border: none;">Experience</h2>
             <h3>Research Experience</h3>
-            <div class="info-block">
-                <div class="info-header">
-                    <span>Visual Media Lab (KAIST)</span>
-                    <span>Dec. 2021 ~ Feb. 2022</span>
+            <div class="list-item" style="display: grid; grid-template-columns: 140px 1fr; gap: 30px; margin-bottom: 2rem; align-items: flex-start;">
+                <img src="./images/logo_kaist.png" alt="KAIST Logo" style="width: 100%; height: 30px; object-fit: contain; margin-top: 25px;">
+                <div class="info-block">
+                    <div class="info-header" style="display: flex; justify-content: space-between; font-weight: 600;">
+                        <span>Visual Media Lab (KAIST)</span>
+                        <span>Dec. 2021 ~ Feb. 2022</span>
+                    </div>
+                    <div class="info-sub">Research Intern</div>
+                    <div class="info-desc">Character Simulation Techniques based on Physics Engine using Deep Reinforcement Learning.</div>
                 </div>
-                <div class="info-sub">Research Intern</div>
-                <div class="info-desc">Character Simulation Techniques Research based on Physics Engine using Deep Reinforcement Learning.</div>
             </div>
-
-            <div class="info-block">
-                <div class="info-header">
-                    <span>Korea Creative Content Agency (KOCCA) & Chung-Ang University</span>
-                    <span>Jun. 2019 ~ Aug. 2019</span>
+            <div class="list-item" style="display: grid; grid-template-columns: 140px 1fr; gap: 30px; margin-bottom: 2rem; align-items: flex-start;">
+                <img src="./images/logo_cau.png" alt="CAU Logo" style="width: 100%; height: 60px; object-fit: contain; margin-top: 10px;">
+                <div class="info-block">
+                    <div class="info-header" style="display: flex; justify-content: space-between; font-weight: 600;">
+                        <span>Korea Creative Content Agency & Chung-Ang University</span>
+                        <span>Jun. 2019 ~ Aug. 2019</span>
+                    </div>
+                    <div class="info-sub">Technical Researcher</div>
+                    <div class="info-desc"><a href="https://artech.cau.ac.kr/project/6" target="_blank">Development of Visual Perception Model for Digital Human based on big-data</a>.</div>
                 </div>
-                <div class="info-sub">Technical Researcher</div>
-                <div class="info-desc"><a href="https://artech.cau.ac.kr/project/6" target="_blank">Development of Visual Perception Model for Digital Human based on big-data</a>.</div>
             </div>
-
             <h3>Work Experience</h3>
-            <div class="info-block">
-                <div class="info-header">
-                    <span><a href="https://www.kaistudio.co.kr/" target="_blank" style="text-decoration: underline; color: inherit;">KAI</a> (KAIST Spin-off)</span>
-                    <span>July. 2022 ~ Dec. 2022</span>
-                </div>
-                <div class="info-sub">Intern, Software Engineer</div>
-                <div class="info-desc">Development of Real-time Mobile Chat Application based on Metaverse.</div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="images/GCT722.png" alt="GCT722">
+            <div class="list-item" style="display: grid; grid-template-columns: 140px 1fr; gap: 30px; margin-bottom: 2rem; align-items: flex-start;">
+                <img src="./images/logo_kai.png" alt="KAI Logo" style="width: 100%; height: 45px; object-fit: contain; margin-top: 20px;">
+                <div class="info-block">
+                    <div class="info-header" style="display: flex; justify-content: space-between; font-weight: 600;">
+                        <span>KAI (KAIST Spin-off)</span>
+                        <span>July. 2022 ~ Dec. 2022</span>
                     </div>
-                    <a href="./projects/GCT722.html" target="_blank">HaptoRelax →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="images/GCT501.png" alt="GCT501">
-                    </div>
-                    <a href="./projects/GCT501.html" target="_blank">MINIEMO →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="images/MV600.png" alt="MV600">
-                    </div>
-                    <a href="./projects/MV600.html" target="_blank">Choreography Production in XR →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="images/GCT573.png" alt="GCT573">
-                    </div>
-                    <a href="./projects/GCT573.html" target="_blank">Geometric Scale Estimation →</a>
+                    <div class="info-sub">Intern, Software Engineer</div>
+                    <div class="info-desc">Development of Real-time Mobile Chat Application based on Metaverse.</div>
                 </div>
             </div>
         </section>
 
         <section id="awards">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-                <div>
-                    <h2>Awards & Honors</h2>
-                    <div class="info-block">
-                        <div class="info-header" style="font-size: 0.95rem;">KAIST GSMV Student Council</div>
-                        <div class="info-sub">(Spring 2024 ~ Spring 2025)</div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-header" style="font-size: 0.95rem;">KAIST Scholarship</div>
-                        <div class="info-sub">Graduate School of Metaverse (Spring 2023 ~ Present)</div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-header" style="font-size: 0.95rem;">Innovation Challenge Encouragement Award (3rd)</div>
-                        <div class="info-sub">Korea Haptics Conference Sponsored by LG Electronics (Nov. 2023)</div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-header" style="font-size: 0.95rem;">HCI@KAIST Student Committee</div>
-                        <div class="info-sub">(Mar. 2023 ~ Feb. 2024)</div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-header" style="font-size: 0.95rem;">CAU Undergraduate Fellowship</div>
-                        <div class="info-sub">Dean's List (Spring 2021)</div>
-                    </div>
-                </div>
-                <div>
-                    <h2>Academic Service</h2>
-                    <div class="info-block">
-                        <div class="info-sub"><strong>Reviewer</strong></div>
-                        <div class="info-desc">ACM IMWUT 2025<br>ACM Augmented Humans 2025, 2026</div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-sub"><strong>Student Volunteer</strong></div>
-                        <div class="info-desc">ACM CHI 2025</div>
-                    </div>
-                </div>
-            </div>
+            <h2 style="justify-content: center; border: none;">Awards & Honors</h2>
+            <ul class="bullet-list">
+                <li><strong>KAIST GSMV Student Council</strong> (Spring 2024 ~ Spring 2025)</li>
+                <li><strong>Student Innovation Challenge Sponsored by LG Electronics: Encouragement Award (3rd)</strong> Korea Haptics Conference (Nov. 2023)</li>
+                <li><strong>HCI@KAIST Student Committee</strong> (Mar. 2023 ~ Feb. 2024)</li>
+                <li><strong>KAIST Scholarship</strong> Graduate School of Metaverse (Spring 2023 ~ Present)</li>
+                <li><strong>CAU Undergraduate Fellowship</strong> Dean's List (Spring 2021)</li>
+            </ul>
         </section>
 
-        <section id="skills" style="border-bottom: none;">
-            <h2>Skills & Techniques</h2>
-            <div class="skill-grid">
-                <div class="skill-cat">Programming</div>
-                <div class="skill-val">Python, C, C#</div>
-            </div>
-            <div class="skill-grid">
-                <div class="skill-cat">Game Engine</div>
-                <div class="skill-val">Unity, Unreal Engine</div>
-            </div>
-            <div class="skill-grid">
-                <div class="skill-cat">Physical Computing</div>
-                <div class="skill-val">Arduino, Raspberry Pi, Orange Pi</div>
-            </div>
-            <div class="skill-grid">
-                <div class="skill-cat">3D Program</div>
-                <div class="skill-val">Maya, Blender, Rhino</div>
+        <section id="service">
+            <h2 style="justify-content: center; border: none;">Academic Service</h2>
+            <div class="service-container">
+                <div>
+                    <div class="service-title">Reviewer</div>
+                    <ul class="service-list">
+                        <li>ACM IMWUT 2025</li>
+                        <li>ACM Augmented Humans 2025, 2026</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="service-title">Student Volunteer</div>
+                    <ul class="service-list">
+                        <li>ACM CHI 2025</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 Soyeong Yang.</p>
+            <p>&copy; 2026 Soyeong Yang. All rights reserved</p>
         </footer>
     </div>
 
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        function openModal(imgSrc) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = imgSrc;
+            // 배경 스크롤 방지
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+            // 배경 스크롤 복구
+            document.body.style.overflow = "auto";
+        }
     </script>
 </body>
 </html>

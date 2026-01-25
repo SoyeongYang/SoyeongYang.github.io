@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Soyeong Yang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #111;
+            --secondary-color: #555;
+            --link-color: #2753C5;
+            --bg-color: #ffffff;
+            --border-color: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--primary-color); }
+
+        nav {
+            position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 1.2rem 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 25px; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .site-title { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: inherit; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: var(--secondary-color); font-weight: 500; }
+
+        header { padding: 60px 0 20px; text-align: center; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 40px 0; }
+        .project-card { display: flex; flex-direction: column; }
+        .project-img-container { width: 100%; height: 220px; overflow: hidden; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 12px; }
+        .project-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .project-card:hover img { transform: scale(1.05); }
+        .project-card a { text-align: center; text-decoration: underline; color: var(--primary-color); font-weight: 700; font-size: 1.1rem; }
+
+        footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="site-title">Soyeong Yang</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#publications">Research</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="projects.html" style="color: var(--link-color);">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Projects</h1>
+            <p style="color: var(--secondary-color);">Coursework and Research Projects</p>
+        </header>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img-container"><img src="images/GCT722.png" alt="GCT722"></div>
+                <a href="./projects/GCT722.html" target="_blank">HaptoRelax →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-img-container"><img src="images/GCT501.png" alt="GCT501"></div>
+                <a href="./projects/GCT501.html" target="_blank">MINIEMO →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-img-container"><img src="images/MV600.png" alt="MV600"></div>
+                <a href="./projects/MV600.html" target="_blank">Choreography Production in XR →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-img-container"><img src="images/GCT573.png" alt="GCT573"></div>
+                <a href="./projects/GCT573.html" target="_blank">Geometric Scale Estimation →</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Soyeong Yang. All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
