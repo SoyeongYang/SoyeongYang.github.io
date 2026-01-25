@@ -8,37 +8,92 @@
     <style>
         :root { --primary-color: #111; --secondary-color: #555; --link-color: #2753C5; --bg-color: #ffffff; --border-color: #eeeeee; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--primary-color); background-color: var(--bg-color); }
-        .container { max-width: 800px; margin: 0 auto; padding: 60px 25px; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--primary-color); }
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 25px; }
+        
         .back-link { text-decoration: none; color: var(--link-color); font-weight: 600; display: inline-block; margin-bottom: 30px; }
-        h1 { font-size: 2rem; margin-bottom: 10px; border-left: 5px solid var(--link-color); padding-left: 15px; }
-        .venue { color: var(--secondary-color); font-style: italic; margin-bottom: 30px; }
-        .hero-img { width: 100%; border-radius: 12px; margin-bottom: 40px; border: 1px solid var(--border-color); }
+        .back-link:hover { text-decoration: underline; }
+
+        h1 { 
+            font-size: 2rem; 
+            margin-bottom: 30px;
+            border-left: 5px solid var(--link-color); 
+            padding-left: 15px; 
+        }
         h2 { font-size: 1.4rem; margin: 40px 0 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
-        p { margin-bottom: 20px; color: var(--secondary-color); }
-        .btn-style { text-decoration: none !important; color: #000000 !important; font-size: 0.85rem; font-weight: 600; background: #f1f1f1; padding: 8px 20px; border-radius: 25px; transition: 0.2s; border: 1px solid #e0e0e0; display: inline-flex; margin-right: 10px; }
-        .btn-style:hover { background: #e5e5e5; }
+        p { color: var(--secondary-color); margin-bottom: 20px; }
+
+        /* 3-Column Image Grid */
+        .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 30px 0; }
+        .image-grid img { width: 100%; border-radius: 8px; border: 1px solid var(--border-color); object-fit: cover; height: 200px; }
+
+        /* Banner Style */
+        .video-banner { 
+            background: #f1f1f1; padding: 20px; text-align: center; border-radius: 8px; 
+            margin: 40px 0 20px; font-weight: 700; font-size: 1.1rem;
+        }
+
+        /* 2-Column Video Grid */
+        .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
+        .video-item { text-align: center; }
+        .video-label { display: block; margin-bottom: 15px; font-weight: 600; font-size: 0.9rem; }
+        .video-container {
+            width: 100%; position: relative; padding-bottom: 56.25%; height: 0;
+            border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);
+        }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @media (max-width: 768px) {
+            .image-grid, .video-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="../index.html" class="back-link">← Back to Home</a>
-        <h1>[ISMAR2025] AquaHaptics</h1>
-        <p class="venue">Demo at International Symposium on Mixed and Augmented Reality (ISMAR) 2025</p>
         
-        <img src="../images/AquaHaptics_ISMAR_2025.jpg" alt="AquaHaptics Demo" class="hero-img">
+        <h1>AquaHaptics: Hand-Adaptive Haptic Feedback for VR Underwater</h1>
 
-        <div class="links">
-            <a href="#" class="btn-style">Abstract PDF</a>
-            <a href="#" class="btn-style">Demo Video</a>
-            <a href="#" class="btn-style">Poster</a>
+        <p><strong>AquaHaptics</strong> is a novel multimodal haptic rendering pipeline that employs richer drag and added mass forces using pneumatic-based haptic gloves. It dynamically adapts to the user's hand movement and posture-reflected elements. By modulating pressure variations, it conveys fluid smoothness through exponentially deflating tactile feedback and the fluid mass through linear drawing kinesthetic feedback.</p>
+
+        <div class="image-grid">
+            <img src="../images/ISMAR_2025_photo1.jpg" alt="ISMAR Demo 1">
+            <img src="../images/ISMAR_2025_photo2.jpg" alt="ISMAR Demo 2">
+            <img src="../images/ISMAR_2025_photo3.jpg" alt="ISMAR Demo 3">
         </div>
 
-        <h2>Project Description</h2>
-        <p>This demo presents AquaHaptics, a hand-based multimodal haptic interaction system designed for immersive virtual underwater experiences. The system integrates pressure, vibration, and thermal feedback to simulate the complex physical sensations of being underwater.</p>
-        
-        <h2>Key Technologies</h2>
-        <p>Using Unity and custom-built physical computing modules (Arduino), we developed a rendering algorithm that ensures cognitively meaningful haptic feedback during VR underwater navigation.</p>
+        <div class="video-banner">
+            🎥 Check out the on-site demo footage from ISMAR 2025!
+        </div>
+
+        <div class="video-grid">
+            <div class="video-item">
+                <span class="video-label">Swimming with hands 🏊‍♂️</span>
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/Kp3grUjr4T8?si=EyHsumhYgqB3QovO" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="video-item">
+                <span class="video-label">Catching fish 🐟</span>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/DPF0l-uGRkY?si=ZPqUGtnrRR1EnS_N" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
