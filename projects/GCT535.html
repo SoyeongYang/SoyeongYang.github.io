@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MV600 Project | Soyeong Yang</title>
+    <title>GCT535 Project | Soyeong Yang</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary-color: #111; --secondary-color: #555; --link-color: #2753C5; --bg-color: #ffffff; --border-color: #eeeeee; }
@@ -104,16 +104,16 @@
     <div class="container">
         <a href="../projects.html" class="back-link">← Back to Projects</a>
         
-        <h1>A pipeline of XR-based Moving Trajectory Editing System for Choreography Production</h1>
+        <h1>Wake Up!: Stereo sounds-based Game</h1>
         <div class="project-meta">
-            <strong>Course:</strong> [MV600] Augmented Reality Project (KAIST)<br>
+            <strong>Course:</strong> [GCT535] Sound Technology for Multimedia (KAIST)<br>
             <strong>Role:</strong> Lead Research & Developer<br>
-            <strong>Stack:</strong> C++, Unity, VR Interaction, Rendering Algorithm
+            <strong>Stack:</strong> C++, Unity, Visual Rendering
         </div>
 
         <div class="video-container">
             <iframe 
-                src="https://www.youtube.com/embed/qIksYsXwaJE?si=G0jOVfsJTu7vU1mT" 
+                src="https://www.youtube.com/embed/qJVes2upjzs?si=YuckJBs9EuSbLjzk" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -123,25 +123,22 @@
         </div>
 
         <div class="item-links">
-            <a href="javascript:void(0);" onclick="openPDF('../assets/MV600_paper.pdf')" class="btn-style">📄 Paper</a>
-            <!-- <a href="#" class="btn-style">💻 Github</a> -->
+            <a href="javascript:void(0);" onclick="openPDF('../assets/GCT535_report.pdf')" class="btn-style">📄 Report</a>
+            <a href="javascript:void(0);" onclick="openPDF('../assets/GCT535_presentation.pdf')" class="btn-style">🖥️ Presentation</a>
+            <a href="../assets/GCT535_app.zip" download class="btn-style">🚀 Download Game (.zip)</a>
         </div>
 
         <div id="pdfModal" class="modal" onclick="closePDF()">
             <div class="modal-content" onclick="event.stopPropagation()">
-                <span class="close-modal" onclick="closePDF()">&times;</span>
+                <span class="close-modal" onclick="closePDF()">&times;</span>ㅎ
                 <iframe id="pdfFrame" src=""></iframe>
             </div>
         </div>
 
-        <h2>Abstract</h2>
-        <p>Digital twins (DT) and Extended reality (XR) are widely explored fields of study in many applications. However, the implemented application 
-           or defined framework for choreography editing is not studied, in spite of its possible increase in utility. In this work, we propose a novel 
-           approach to utilize the DT+XR environment for choreography production. Our method will contain a user interface, trajectory editing, and server 
-           in a single framework. Furthermore, studies on each technological component will be contained for detailed implementation. Unlike existing trajectory 
-           production applications, it is expected to be useful to choreographers as it can be observed from various perspectives since this system utilizes 
-           3D space which makes a significant contribution to the choreography field by intuitively and easily creating movement lines. The movement data of each 
-           dancer saved from the user also can be augmented in various other real-world stages later to simulate the dancers’ movements in advance.</p>
+        <h2>Project Description</h2>
+        <p>The goal of this game is 'Wake up the family and turn off the alarm'. The player has to assist family members in waking up on time 
+            for their daily routines such as work or school, by finding them and gathering necessary items based on the stereo sound effects 
+            following the schedule. The game is played in the third-person view.</p>
     </div>
 
     <script>
