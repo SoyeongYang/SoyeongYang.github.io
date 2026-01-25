@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Soyeong Yang</title>
+    <link rel="icon" href="./images/icon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -15,72 +16,127 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--primary-color); }
-
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; color: var(--primary-color); background-color: var(--bg-color); 
+        }
         nav {
             position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 1.2rem 0;
         }
         .container { max-width: 900px; margin: 0 auto; padding: 0 25px; }
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .site-title { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: inherit; }
+        .site-logo { height: 32px; width: auto; display: block; }
+        
         nav ul { display: flex; list-style: none; gap: 25px; }
-        nav ul li a { text-decoration: none; color: var(--secondary-color); font-weight: 500; }
+        nav ul li a { text-decoration: none; color: var(--secondary-color); font-weight: 500; font-size: 0.95rem; }
+        nav ul li a:hover { color: var(--link-color); }
 
-        header { padding: 60px 0 20px; text-align: center; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        section { padding: 50px 0; border-bottom: 1px solid var(--border-color); text-align: center; }
+        h2 { 
+            font-size: 1.6rem; 
+            margin-bottom: 1.8rem; 
+            font-weight: 700; 
+            color: var(--primary-color); 
+        }
 
-        .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 40px 0; }
-        .project-card { display: flex; flex-direction: column; }
-        .project-img-container { width: 100%; height: 220px; overflow: hidden; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 12px; }
-        .project-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-        .project-card:hover img { transform: scale(1.05); }
-        .project-card a { text-align: center; text-decoration: underline; color: var(--primary-color); font-weight: 700; font-size: 1.1rem; }
+        /* Project Grid & Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: #fff;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .project-img-container {
+            width: 100%;
+            height: 200px;
+            background: #f9f9f9;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-card a {
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .project-card a:hover {
+            color: var(--link-color);
+        }
 
         footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.8rem; }
 
         @media (max-width: 768px) {
+            .nav-content { flex-direction: column; gap: 10px; }
+            nav ul { gap: 15px; }
             .project-grid { grid-template-columns: 1fr; }
+            h2 { font-size: 1.5rem; text-align: center; }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="container nav-content">
-            <a href="index.html" class="site-title">Soyeong Yang</a>
+            <a href="index.html"><img src="./images/logo.png" alt="Soyeong Yang" class="site-logo"></a>
             <ul>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#publications">Research</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
                 <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="projects.html" style="color: var(--link-color);">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="container">
-        <header>
-            <h1>Projects</h1>
-            <p style="color: var(--secondary-color);">Coursework and Research Projects</p>
-        </header>
+        <section id="projects-list" style="border-bottom: none;">
+            <h2>Projects</h2>
+            <p style="color: var(--secondary-color); margin-top: -1.2rem; margin-bottom: 2.5rem;">Coursework and Research Projects</p>
 
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-img-container"><img src="images/GCT722.png" alt="GCT722"></div>
-                <a href="./projects/GCT722.html" target="_blank">HaptoRelax →</a>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img-container"><img src="images/GCT722.png" alt="GCT722"></div>
+                    <a href="./projects/GCT722.html" target="_blank">HaptoRelax →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-container"><img src="images/GCT501.png" alt="GCT501"></div>
+                    <a href="./projects/GCT501.html" target="_blank">MINIEMO →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-container"><img src="images/MV600.png" alt="MV600"></div>
+                    <a href="./projects/MV600.html" target="_blank">Choreography Production in XR →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-container"><img src="images/GCT573.png" alt="GCT573"></div>
+                    <a href="./projects/GCT573.html" target="_blank">Geometric Scale Estimation →</a>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="project-img-container"><img src="images/GCT501.png" alt="GCT501"></div>
-                <a href="./projects/GCT501.html" target="_blank">MINIEMO →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-img-container"><img src="images/MV600.png" alt="MV600"></div>
-                <a href="./projects/MV600.html" target="_blank">Choreography Production in XR →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-img-container"><img src="images/GCT573.png" alt="GCT573"></div>
-                <a href="./projects/GCT573.html" target="_blank">Geometric Scale Estimation →</a>
-            </div>
-        </div>
+        </section>
 
         <footer>
             <p>&copy; 2026 Soyeong Yang. All rights reserved</p>
