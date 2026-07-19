@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME683 Project | Soyeong Yang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+
+        <h1>PhantomFlow: Hand-penetrating Sensation using Dual-Sided Vibrotactile Arrays</h1>
+        <div class="project-meta">
+            <strong>Course:</strong> [ME683] Human Robot Interaction (KAIST)<br>
+            <strong>Role:</strong> Developer<br>
+            <strong>Stack:</strong> Haptic Rendering, Unity, Teensy, Serial Communication
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/2KuWCplAJco" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="item-links">
+            <a href="javascript:void(0);" onclick="openPDF('../assets/ME683_P1.pdf')" class="btn-style">🖥️
+                Presentation</a>
+            <!-- <a href="#" class="btn-style">💻 Github</a> -->
+        </div>
+
+
+
+        <h2>Abstract</h2>
+        <p>PhantomFlow is a wearable haptic interface that investigates the perception of
+            fluid penetrating through the hand using dual-sided vibrotactile stimulation.
+            The device consists of symmetrically aligned linear resonant actuator arrays
+            placed on the palmar and dorsal surfaces of the hand. A real-time rendering
+            pipeline implemented in Unity converts simulated fluid–hand collisions into
+            spatially and temporally coordinated vibration patterns. Complementary
+            amplitude profiles are applied to opposing actuator pairs to produce a
+            continuous sensation transitioning from one side of the hand to the other,
+            while distributed activation supports the rendering of multiple droplets and
+            varying fluid intensities. Haptic commands are transmitted to a Teensy 4.0
+            controller, which independently drives eight actuators through PWM-based
+            control. The resulting prototype provides a hardware and software framework
+            for exploring depth-oriented phantom tactile sensations and interactive
+            fluid-based haptic experiences.</p>
+    </div>
+
+    <script src="common.js"></script>
+</body>
+
+</html>

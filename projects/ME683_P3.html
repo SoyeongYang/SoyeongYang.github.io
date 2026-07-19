@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME683 Project | Soyeong Yang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+
+        <h1>Improvement of Transparency and Stability in Teleoperation using Passivity Control</h1>
+        <div class="project-meta">
+            <strong>Course:</strong> [ME683] Human Robot Interaction (KAIST)<br>
+            <strong>Role:</strong> Developer<br>
+            <strong>Stack:</strong> Bilateral Teleoperation, Passivity Control, MATLAB, Teensy, UART
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/3L_7WZk5bTw" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="item-links">
+            <a href="javascript:void(0);" onclick="openPDF('../assets/ME683_P3.pdf')" class="btn-style">🖥️
+                Presentation</a>
+            <!-- <a href="#" class="btn-style">💻 Github</a> -->
+        </div>
+
+
+
+        <h2>Abstract</h2>
+        <p>This project presents a bilateral teleoperation system designed to improve
+            haptic transparency and stability under mechanical imperfections, signal noise,
+            and communication delay. Two planar haptic devices were configured in a
+            leader–follower architecture, transmitting position commands to the follower
+            and rendering measured interaction forces back to the operator. The hardware
+            was redesigned to reduce friction, cable slip, structural compliance, and
+            backlash, while a distributed 1 kHz embedded controller implemented kinematic
+            mapping, PD-based joint tracking, and real-time force feedback. Direct UART
+            communication, CRC-16 packet validation, interrupt-based encoder acquisition,
+            and multi-stage signal conditioning were incorporated to improve communication
+            reliability and suppress unstable motion. A time-domain Passivity Observer and
+            Controller was further applied to detect active energy generation and inject
+            adaptive damping, providing a unified platform for investigating the trade-off
+            between transparency and stability in delayed haptic teleoperation.</p>
+    </div>
+
+    <script src="common.js"></script>
+</body>
+
+</html>

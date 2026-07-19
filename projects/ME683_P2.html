@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME683 Project | Soyeong Yang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+
+        <h1>Air Hockey Simulator through a 2-DoF Kinesthetic Haptic System</h1>
+        <div class="project-meta">
+            <strong>Course:</strong> [ME683] Human Robot Interaction (KAIST)<br>
+            <strong>Role:</strong> Developer<br>
+            <strong>Stack:</strong> Kinesthetic Haptic Rendering, Unity, Teensy, Serial Communication
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/GiDVN6PlCV0" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="item-links">
+            <a href="javascript:void(0);" onclick="openPDF('../assets/ME683_P2.pdf')" class="btn-style">🖥️
+                Presentation</a>
+            <!-- <a href="#" class="btn-style">💻 Github</a> -->
+        </div>
+
+
+
+        <h2>Abstract</h2>
+        <p>This project presents an air hockey simulator built around a two-degree-of-freedom
+            planar kinesthetic haptic device. The system renders mallet–puck impacts, virtual
+            table boundaries, surface friction, and spatial textures as real-time force
+            feedback. To maintain a high-frequency haptic loop, forward kinematics, virtual
+            physics, force computation, and PWM motor control are executed on a Teensy 4.1,
+            while Unity provides visualization, gameplay logic, and configurable parameters
+            such as puck mass and ground material. The rendering model combines
+            penetration-based spring forces, velocity-dependent damping, and
+            position-dependent vibration. Mechanical improvements, which includes stiffer
+            I-beam links, guided cable-routing grooves, and adjustable cable tensioners, were
+            incorporated to improve planar motion, force-transmission consistency, and
+            feedback repeatability. The resulting prototype demonstrates an integrated
+            hardware and software framework for interactive 2D kinesthetic simulation.</p>
+    </div>
+
+    <script src="common.js"></script>
+</body>
+
+</html>
