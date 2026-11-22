@@ -198,6 +198,73 @@
             margin-bottom: 4px;
         }
 
+        .award-badge {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.45rem;
+            height: 1.45rem;
+            margin-left: 0.3rem;
+            border-radius: 50%;
+            background: #fff7df;
+            color: #b77900;
+            vertical-align: middle;
+        }
+
+        .award-badge svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .award-badge::after {
+            content: attr(aria-label);
+            position: absolute;
+            z-index: 1;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            padding: 5px 9px;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1.4;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, 4px);
+            transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+            pointer-events: none;
+        }
+
+        .award-badge::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: calc(100% + 2px);
+            left: 50%;
+            border: 5px solid transparent;
+            border-top-color: #222;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%);
+            transition: opacity 0.15s ease, visibility 0.15s ease;
+        }
+
+        .award-badge:hover::before,
+        .award-badge:hover::after,
+        .award-badge:focus-visible::before,
+        .award-badge:focus-visible::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .award-badge:hover::after,
+        .award-badge:focus-visible::after {
+            transform: translate(-50%, 0);
+        }
+
         .item-authors {
             font-size: 0.95rem;
             color: var(--primary-color);
@@ -595,7 +662,7 @@
                         <a href="https://doi.org/10.1109/TVCG.2026.3652832" class="btn-style">DOI</a>
                         <a href="https://aquahaptics.hcitech.org/" class="btn-style">Project Website</a>
                         <a href="https://youtu.be/Wb6hJrp4kCM?si=mp78M1cxpOc8Y7ES" class="btn-style">Video</a>
-                        <a href="https://www.youtube.com/embed/48Q5vsCY_BY?si=EYbp5jeMQ2EmRa_E"
+                        <a href="https://www.youtube.com/embed/48Q5vsCY_BY?si=AL1opbwgoFs9Hu8k"
                             class="btn-style">Presentation</a>
                     </div>
                 </div>
@@ -607,12 +674,24 @@
                     playsinline></video>
                 <div class="pub-info">
                     <div class="item-title">VibeThrough: Timing-Controlled Vibrotactile Rendering for Through-Hand
-                        Penetration Sensations</div>
+                        Penetration Sensations
+                        <span class="award-badge" role="img" tabindex="0" aria-label="Outstanding Award">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="5"></circle>
+                                <path d="m8.2 12.2-1 9L12 18l4.8 3.2-1-9"></path>
+                                <path d="m12 5.5.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"
+                                    fill="currentColor" stroke="none"></path>
+                            </svg>
+                        </span>
+                    </div>
                     <div class="item-authors"><span class="me">Soyeong Yang</span><sup>*</sup>, Nakhyeong
                         Lee<sup>*</sup>, Sang Ho Yoon, Ki-Uk
                         Kyung</div>
-                    <div class="item-venue">Proceedings of the 2026 AsiaHaptics Conference (AsiaHaptics 2026 Demo,
-                        Accepted)</div>
+                    <div class="item-venue">Proceedings of the 2026 AsiaHaptics Conference (AsiaHaptics 2026 Demo)</div>
+                    <div class="item-links">
+                        <a href="https://www.youtube.com/embed/VNB0z8P2zV8?si=-PG67q75O-QkyqtN" class="btn-style">Video</a>
+                    </div>
                 </div>
             </div>
             <div class="list-item">
@@ -681,11 +760,31 @@
         <section id="awards">
             <h2 style="justify-content: center; border: none;">Awards & Honors</h2>
             <ul class="bullet-list">
+                <li><strong>Haptic Innovation Challenge</strong> AsiaHaptics Conference (Nov. 2026)
+                    <span class="award-badge" role="img" tabindex="0" aria-label="Outstanding Award">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="m8.2 12.2-1 9L12 18l4.8 3.2-1-9"></path>
+                            <path d="m12 5.5.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"
+                                fill="currentColor" stroke="none"></path>
+                        </svg>
+                    </span>
+                </li>
                 <li><strong>Research Grant for Ph.D. Fellowship</strong> National Research Foundation (NRF) of Korea
                     (Sep. 2026 ~ Aug. 2028)</li>
                 <li><strong>KAIST GSMV Student Council</strong> (Spring 2024 ~ Spring 2025)</li>
-                <li><strong>Student Innovation Challenge Sponsored by LG Electronics: Encouragement Award (3rd)</strong>
-                    Korea Haptics Conference (Nov. 2023)</li>
+                <li><strong>Student Innovation Challenge Sponsored by LG Electronics</strong> Korea Haptics Conference (Nov. 2023)
+                    <span class="award-badge" role="img" tabindex="0" aria-label="Encouragement Award">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="m8.2 12.2-1 9L12 18l4.8 3.2-1-9"></path>
+                            <path d="m12 5.5.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"
+                                fill="currentColor" stroke="none"></path>
+                        </svg>
+                    </span>
+                </li>
                 <li><strong>HCI@KAIST Student Committee</strong> (Mar. 2023 ~ Feb. 2024)</li>
                 <li><strong>KAIST Scholarship</strong> Graduate School of Metaverse (Spring 2023 ~ Present)</li>
                 <li><strong>CAU Undergraduate Fellowship</strong> Dean's List (Spring 2021)</li>
