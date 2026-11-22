@@ -206,10 +206,14 @@
             width: 1.45rem;
             height: 1.45rem;
             margin-left: 0.3rem;
+            padding: 0;
+            border: 0;
             border-radius: 50%;
             background: #fff7df;
             color: #b77900;
+            font: inherit;
             vertical-align: middle;
+            cursor: pointer;
         }
 
         .award-badge svg {
@@ -662,8 +666,7 @@
                         <a href="https://doi.org/10.1109/TVCG.2026.3652832" class="btn-style">DOI</a>
                         <a href="https://aquahaptics.hcitech.org/" class="btn-style">Project Website</a>
                         <a href="https://youtu.be/Wb6hJrp4kCM?si=mp78M1cxpOc8Y7ES" class="btn-style">Video</a>
-                        <a href="https://www.youtube.com/embed/48Q5vsCY_BY?si=AL1opbwgoFs9Hu8k"
-                            class="btn-style">Presentation</a>
+                        <a href="https://www.youtube.com/watch?v=48Q5vsCY_BY" class="btn-style">Presentation</a>
                     </div>
                 </div>
             </div>
@@ -675,7 +678,8 @@
                 <div class="pub-info">
                     <div class="item-title">VibeThrough: Timing-Controlled Vibrotactile Rendering for Through-Hand
                         Penetration Sensations
-                        <span class="award-badge" role="img" tabindex="0" aria-label="Outstanding Award">
+                        <button type="button" class="award-badge" aria-label="Outstanding Award"
+                            onclick="openPDF('./assets/AsiaHaptics_2026_Demo_Award.pdf')">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="12" cy="8" r="5"></circle>
@@ -683,14 +687,14 @@
                                 <path d="m12 5.5.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"
                                     fill="currentColor" stroke="none"></path>
                             </svg>
-                        </span>
+                        </button>
                     </div>
                     <div class="item-authors"><span class="me">Soyeong Yang</span><sup>*</sup>, Nakhyeong
                         Lee<sup>*</sup>, Sang Ho Yoon, Ki-Uk
                         Kyung</div>
                     <div class="item-venue">Proceedings of the 2026 AsiaHaptics Conference (AsiaHaptics 2026 Demo)</div>
                     <div class="item-links">
-                        <a href="https://www.youtube.com/embed/VNB0z8P2zV8?si=-PG67q75O-QkyqtN" class="btn-style">Video</a>
+                        <a href="https://www.youtube.com/watch?v=VNB0z8P2zV8" class="btn-style">Video</a>
                     </div>
                 </div>
             </div>
@@ -761,7 +765,8 @@
             <h2 style="justify-content: center; border: none;">Awards & Honors</h2>
             <ul class="bullet-list">
                 <li><strong>Haptic Innovation Challenge</strong> AsiaHaptics Conference (Nov. 2026)
-                    <span class="award-badge" role="img" tabindex="0" aria-label="Outstanding Award">
+                    <button type="button" class="award-badge" aria-label="Outstanding Award"
+                        onclick="openPDF('./assets/AsiaHaptics_2026_HIC_Award.pdf')">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <circle cx="12" cy="8" r="5"></circle>
@@ -769,13 +774,14 @@
                             <path d="m12 5.5.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"
                                 fill="currentColor" stroke="none"></path>
                         </svg>
-                    </span>
+                    </button>
                 </li>
                 <li><strong>Research Grant for Ph.D. Fellowship</strong> National Research Foundation (NRF) of Korea
                     (Sep. 2026 ~ Aug. 2028)</li>
                 <li><strong>KAIST GSMV Student Council</strong> (Spring 2024 ~ Spring 2025)</li>
                 <li><strong>Student Innovation Challenge Sponsored by LG Electronics</strong> Korea Haptics Conference (Nov. 2023)
-                    <span class="award-badge" role="img" tabindex="0" aria-label="Encouragement Award">
+                    <button type="button" class="award-badge" aria-label="Encouragement Award"
+                        onclick="openPDF('./assets/KHC_2023_Award.pdf')">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <circle cx="12" cy="8" r="5"></circle>
@@ -783,7 +789,7 @@
                             <path d="m12 5.5.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"
                                 fill="currentColor" stroke="none"></path>
                         </svg>
-                    </span>
+                    </button>
                 </li>
                 <li><strong>HCI@KAIST Student Committee</strong> (Mar. 2023 ~ Feb. 2024)</li>
                 <li><strong>KAIST Scholarship</strong> Graduate School of Metaverse (Spring 2023 ~ Present)</li>
